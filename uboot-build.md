@@ -46,3 +46,24 @@ github地址为
 git@github.com:zhuzhizhan/gcc-arm32.git
 git@github.com:zhuzhizhan/gcc-arm64.git
 ~~~
+## 2. 编译uboot
+
+###2.1 apt安装编译链编译
+
+32位编译
+
+~~~
+make CROSS_COMPILE=arm-linux-gnueabi- <board_name>_defconfig
+make
+~~~
+
+64位编译
+
+~~~
+make CROSS_COMPILE=aarch64-linux-gnu- <board_name>_defconfig
+make ARCH=arm CROSS_COMPILE=aarch64-linux-gnu-
+~~~
+
+### 2.2现成工具链编译
+
+把CROSS_COMPILE=下载的工具链路径即可。
